@@ -191,12 +191,12 @@ class NativeBundle:
         self._cleanup(distroot)
         self._install_native_packages(distroot, pkgdirs=options.pkgdirs)
         self._init_metadata(distroot)
-        self._init_launchers(distroot)
-        self._install_icons(distroot)
-        self._install_exe_launchers(distroot)
-        self._install_packages(distroot, ["bash", "coreutils"])  # for postinst
+        # self._init_launchers(distroot)
+        # self._install_icons(distroot)
+        # self._install_exe_launchers(distroot)
+        # self._install_packages(distroot, ["bash", "coreutils"])  # for postinst
         self._delete_surplus_files(distroot, options)
-        self._install_postinst_scripts(distroot, options)
+        # self._install_postinst_scripts(distroot, options)
 
         distfiles = []
         if options.build_exe:
